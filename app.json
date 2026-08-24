@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Camera808",
+    "slug": "Camera808",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.camera808.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Camera808 needs camera access to capture professional photos with AI auto-adjust.",
+        "NSMicrophoneUsageDescription": "Camera808 needs microphone access for video and sound cues.",
+        "NSPhotoLibraryUsageDescription": "Camera808 saves high quality photos to your gallery.",
+        "NSPhotoLibraryAddUsageDescription": "Camera808 saves your best shots to your photo library."
+      }
+    },
+    "android": {
+      "package": "com.camera808.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0A0F",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Camera808 to access your camera for smart AI photography.",
+          "microphonePermission": "Allow Camera808 to access your microphone.",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Camera808 to access and save photos.",
+          "savePhotosPermission": "Allow Camera808 to save captured photos."
+        }
+      ]
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
